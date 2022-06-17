@@ -8,10 +8,10 @@ module.exports = {
     path: join(__dirname, "lib"),
     filename: "index.js",
   },
-  plugins:[
+  plugins: [
     new HtmlWebpackPlugin({
-        template:join(__dirname, './public/index.html')
-    })
+      template: join(__dirname, "./public/index.html"),
+    }),
   ],
   module: {
     rules: [
@@ -21,7 +21,19 @@ module.exports = {
       },
       {
         test: /\.less$/i,
-        use: ["style-loader", "css-loader","less-loader"],
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
+      {
+        test: /\.(png|gif|jpg|jpeg)/i,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 2 * 1024,
+          },
+        },
+        generator: {
+          filename: "images/[hash:6][ext]",
+        },
       },
     ],
   },
