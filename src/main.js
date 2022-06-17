@@ -14,3 +14,4 @@ png.src = pngSrc
 document.body.appendChild(gif)
 document.body.appendChild(png)
 
+import './assets/fonts/iconfont.css'
