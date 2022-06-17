@@ -13,6 +13,10 @@ module.exports = {
       template: join(__dirname, "./public/index.html"),
     }),
   ],
+  devServer: {
+    open: true,
+    port: 30000,
+  },
   module: {
     rules: [
       {
@@ -39,9 +43,9 @@ module.exports = {
         test: /\.(eot|svg|ttf|woff|woff2)$/i,
         type: "asset/resource",
         generator: {
-          filename: 'fonts/[hash:6][ext]'
-        }
-      }
+          filename: "fonts/[hash:6][ext]",
+        },
+      },
     ],
   },
 };
