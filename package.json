@@ -19,5 +19,10 @@
   "scripts": {
     "build": "webpack",
     "server": "webpack serve"
+  },
+  "dependencies": {
+    "vue": "^3.2.37",
+    "vue-loader": "^17.0.0",
+    "vue-template-compiler": "^2.6.14"
   }
 }
